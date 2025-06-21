@@ -13,6 +13,12 @@
                   Masukan Pengguna
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pakar-hasil.php">
+                  <span data-feather="file"></span>
+                  Hasil
+                </a>
+              </li>
             </ul>
           </div>
         </nav>

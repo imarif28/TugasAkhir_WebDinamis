@@ -50,7 +50,7 @@
                 $data = mysqli_query($connect,$sql);
                 $row = mysqli_fetch_assoc($data);
 
-                if ($row['kode_solusi']=="x-1" || $row['isi_solusi']=="x-2" || $row['isi_solusi']=="x-3" || $row['isi_solusi']=="x-4" || $row['isi_solusi']=="x-5") {
+                if ($row['isi_solusi']=="x-1" || $row['isi_solusi']=="x-2" || $row['isi_solusi']=="x-3" || $row['isi_solusi']=="x-4" || $row['isi_solusi']=="x-5") {
                      echo "<center><p><strong style='color:red'>SISTEM TIDAK MENEMUKAN JAWABAN !</strong></p></center><hr>";
                      ?>
 
@@ -87,6 +87,8 @@
                 }
                 
                 else{
+                    session_start();
+                    $_SESSION['solusi'] = $row['isi_solusi'];
                     echo "<p>Maka kamu harus mengambil prodi : <strong style='color:green'>".$row['isi_solusi']."</strong></p>";
                 }
                 
@@ -123,6 +125,8 @@ $status="menunggu";
 
 $sql1 = "INSERT INTO tb_kesimpulan (solusi, fakta, oleh, status) VALUES ('$solusi', '$fakta', '$oleh', '$status')";
 if (mysqli_query($connect,$sql1)){
+    session_start();
+    $_SESSION['solusi'] = $solusi;
     echo "<script>alert('Saran berhasil dimasukan, harus menunggu moderasi!'); window.location=('hapus-session.php');</script>";
 //echo "<script type='text/javascript'>window.location.replace('pakar-mode.php');</script>";
   }

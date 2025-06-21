@@ -7,7 +7,7 @@ $username = $_POST['username'];
 $password     = $_POST['password'];
 $pass = stripslashes($password);
 $pass     = mysqli_real_escape_string($connect, $pass); //mencegah mysql injection
-$pass = md5($pass); //enkripsi paswot
+$pass = ($pass);
 
   
 $login = mysqli_query($connect, "SELECT * FROM tb_admin WHERE username = '$username' AND password='$pass'");

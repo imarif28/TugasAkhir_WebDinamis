@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 05, 2018 at 01:48 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Host: localhost
+-- Waktu pembuatan: 11 Des 2023 pada 11.48
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,25 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_admin`
+-- Struktur dari tabel `tb_admin`
 --
 
 CREATE TABLE `tb_admin` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tb_admin`
+-- Dumping data untuk tabel `tb_admin`
 --
 
 INSERT INTO `tb_admin` (`username`, `password`) VALUES
-('admin', '21232f297a57a5a743894a0e4a801fc3');
+('ilham', 'ilham');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kesimpulan`
+-- Struktur dari tabel `tb_kesimpulan`
 --
 
 CREATE TABLE `tb_kesimpulan` (
@@ -52,10 +51,10 @@ CREATE TABLE `tb_kesimpulan` (
   `fakta` varchar(100) NOT NULL,
   `oleh` varchar(100) NOT NULL,
   `status` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tb_kesimpulan`
+-- Dumping data untuk tabel `tb_kesimpulan`
 --
 
 INSERT INTO `tb_kesimpulan` (`kode_kesimpulan`, `solusi`, `fakta`, `oleh`, `status`) VALUES
@@ -200,21 +199,25 @@ INSERT INTO `tb_kesimpulan` (`kode_kesimpulan`, `solusi`, `fakta`, `oleh`, `stat
 (139, 'Manajemen (non SMA)', 'Jurusan asal bukan teknik bangunan dan perancangan produk', 'pakar', 'setuju'),
 (140, 'Manajemen (non SMA)', 'Jurusan asal bukan bidang teknologi informasi dan komunikasi', 'pakar', 'setuju'),
 (141, 'Manajemen (non SMA)', 'Jurusan asal adalah bidang bisnis dan manajemen', 'pakar', 'setuju'),
-(142, 'Manajemen (non SMA)', 'Tidak Konsentrasi pada akuntansi', 'pakar', 'setuju');
+(142, 'Manajemen (non SMA)', 'Tidak Konsentrasi pada akuntansi', 'pakar', 'setuju'),
+(150, 'Manajemen', 'suka mencuri', 'atif', 'setuju'),
+(151, 'Manajemen (non SMA)', 'suka mencuri', 'arif', 'setuju'),
+(152, 'Informatika', 'hobi main game', 'ilham', 'setuju'),
+(155, 'Informatika', 'Suka Membuat Komputer', 'farid nur raidananda', 'menunggu');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pertanyaan`
+-- Struktur dari tabel `tb_pertanyaan`
 --
 
 CREATE TABLE `tb_pertanyaan` (
   `kode_pertanyaan` varchar(50) NOT NULL,
   `isi_pertanyaan` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tb_pertanyaan`
+-- Dumping data untuk tabel `tb_pertanyaan`
 --
 
 INSERT INTO `tb_pertanyaan` (`kode_pertanyaan`, `isi_pertanyaan`) VALUES
@@ -252,16 +255,16 @@ INSERT INTO `tb_pertanyaan` (`kode_pertanyaan`, `isi_pertanyaan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_solusi`
+-- Struktur dari tabel `tb_solusi`
 --
 
 CREATE TABLE `tb_solusi` (
   `kode_solusi` varchar(50) NOT NULL,
   `isi_solusi` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tb_solusi`
+-- Dumping data untuk tabel `tb_solusi`
 --
 
 INSERT INTO `tb_solusi` (`kode_solusi`, `isi_solusi`) VALUES
@@ -297,37 +300,69 @@ INSERT INTO `tb_solusi` (`kode_solusi`, `isi_solusi`) VALUES
 ('S8', 'Bioteknologi'),
 ('S9', 'Teologi');
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_users`
+--
+
+CREATE TABLE `tb_users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `age` int(11) NOT NULL,
+  `major` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `tb_users`
+--
+
+INSERT INTO `tb_users` (`id`, `name`, `age`, `major`) VALUES
+(4, 'farid nur raidananda', 20, 'Informatika');
+
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `tb_kesimpulan`
+-- Indeks untuk tabel `tb_kesimpulan`
 --
 ALTER TABLE `tb_kesimpulan`
   ADD PRIMARY KEY (`kode_kesimpulan`);
 
 --
--- Indexes for table `tb_pertanyaan`
+-- Indeks untuk tabel `tb_pertanyaan`
 --
 ALTER TABLE `tb_pertanyaan`
   ADD PRIMARY KEY (`kode_pertanyaan`);
 
 --
--- Indexes for table `tb_solusi`
+-- Indeks untuk tabel `tb_solusi`
 --
 ALTER TABLE `tb_solusi`
   ADD PRIMARY KEY (`kode_solusi`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indeks untuk tabel `tb_users`
+--
+ALTER TABLE `tb_users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tb_kesimpulan`
+-- AUTO_INCREMENT untuk tabel `tb_kesimpulan`
 --
 ALTER TABLE `tb_kesimpulan`
-  MODIFY `kode_kesimpulan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `kode_kesimpulan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_users`
+--
+ALTER TABLE `tb_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

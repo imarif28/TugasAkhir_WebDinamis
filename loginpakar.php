@@ -3,9 +3,6 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="website monitoring suhu dan kelembaban jamur tiram">
-    <meta name="author" content="katon gilang bagaskara">
-    <link rel="icon" href="image/icon.png">
 
     <title>Login</title>
 
@@ -30,7 +27,7 @@
         </label>
       </div>
       <button class="btn btn-lg btn-info btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+      <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
     </form>
   </body>
 </html>
