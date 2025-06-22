@@ -14,6 +14,17 @@ This system provides personalized department recommendations based on student pr
 - **Server**: XAMPP (Apache + MySQL)
 - **Development Environment**: Visual Studio Code
 
+## Documentation
+<div align="center">
+<img src="https://drive.google.com/uc?export=view&id=1aGOmg5ubQ0xmIW_XrVKIxW4aVVkQELjt" width="600" alt="Gambar1">
+<img src="https://drive.google.com/uc?export=view&id=1TgX20WwOmdn36AV0rOE6T4xX5GQlDU7H" width="600" alt="Gambar2">
+<img src="https://drive.google.com/uc?export=view&id=1QXGk0m3O6S4dvVf3XcfHfkadXTkLOFVN" width="600" alt="Gambar3">
+<img src="https://drive.google.com/uc?export=view&id=1a5TR7t16FngTJEGom1YYN_7Umx2clRVz" width="600" alt="Gambar4">
+<img src="https://drive.google.com/uc?export=view&id=1pQNR9T0Y6NOvJAoQwpOtweNS7ppKtfHH" width="600" alt="Gambar5">
+</div>
+
+
+
 ## Features
 
 ### User Interface
@@ -117,85 +128,7 @@ consultation-system/
 4. **User Management**: View consultation history
 5. **Analytics**: System performance metrics
 
-## Key Components
 
-### Expert System Engine
-- Rule-based inference system
-- Weighted scoring algorithm
-- Confidence level calculation
-- Multiple recommendation support
-
-### Question Management
-- Dynamic question loading
-- Conditional question flow
-- Input validation and sanitization
-- Progress tracking
-
-### Security Features
-- SQL injection prevention
-- XSS protection
-- Admin session management
-- Input sanitization
-
-## Technical Specifications
-
-### Performance
-- **Response Time**: < 2 seconds per page
-- **Database Queries**: Optimized with indexing
-- **Memory Usage**: Minimal PHP memory footprint
-- **Compatibility**: PHP 7.4+ recommended
-
-### Browser Support
-- Chrome 80+
-- Firefox 75+
-- Safari 13+
-- Edge 80+
-
-## Development Notes
-
-### Code Structure
-- **MVC Pattern**: Separation of concerns
-- **Modular Design**: Reusable components
-- **Clean Code**: Consistent naming conventions
-- **Documentation**: Inline comments and function descriptions
-
-### Security Considerations
-- **Input Validation**: All user inputs sanitized
-- **Database Security**: Prepared statements
-- **Session Management**: Secure admin sessions
-- **Error Handling**: Graceful error management
-
-## Future Enhancements
-
-### Planned Features
-- Multi-language support
-- Advanced analytics dashboard
-- Email notification system
-- Mobile application version
-- API integration capabilities
-
-### Technical Improvements
-- Caching mechanism implementation
-- Performance optimization
-- Advanced security features
-- Automated testing suite
-
-## Troubleshooting
-
-### Common Issues
-- **Database Connection**: Check XAMPP services
-- **Permission Errors**: Verify file permissions
-- **Display Issues**: Clear browser cache
-- **Admin Access**: Reset admin credentials
-
-### Support
-For technical issues or questions:
-- Check configuration files
-- Verify database connectivity
-- Review error logs
-- Consult documentation
-
----
 
 ## Developer
 
